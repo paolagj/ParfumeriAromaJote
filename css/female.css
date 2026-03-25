@@ -1,0 +1,310 @@
+body {
+  margin:0;
+  color:#fff;
+  background-image: url("../img/home/home-bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;          /* mbulon gjithë faqen, ruan prop. */
+  background-position: center top; /* qendër horizontal + majtas lart vertikal */
+  background-attachment: fixed;
+}
+
+.header1 {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  position: sticky;
+  top:0;
+  z-index:100;
+}
+
+header h1 { font-family: "Playfair Display", serif; font-size:1.8rem; }
+
+.search-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+  margin: 40px 15%;
+}
+
+.search-box-container {
+  flex: 4; /* 4 pjesë nga 6 */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px 40px 12px 16px; 
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(20,20,20,0.55);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchInput::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Clear button */
+#clearSearch {
+  position: absolute;
+  right: 10px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  display: none;
+  transition: 0.3s;
+}
+
+#clearSearch:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Filter toggle button */
+#filterToggle {
+  flex: 1; /* 2 pjesë nga 6 */
+  background: rgba(227, 229, 231, 0.8);
+  padding:10px 16px;
+  font-size: 18px;
+  border-radius:8px;
+  cursor:pointer;
+  color:black;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition:0.3s;
+  text-align:center;
+}
+
+#filterToggle:hover {
+  background: rgba(8, 62, 98, 0.8);
+  color: #fff;
+}
+main { display:flex; position: relative; }
+
+#filterPanel {
+  width:40%;
+  max-width:300px;
+  background-color: rgba(34, 34, 34, 0.85) ; /* gri/zeze e errët mbetet */
+  padding:20px;
+  position:fixed;
+  right:-350px;
+  top:0;
+  height:100vh;
+  overflow-y:auto;
+  transition: right 0.4s ease;
+  z-index:99;
+}
+
+#filterPanel.active { right:0; z-index: 1000;}
+
+.filter-section { margin-bottom:20px; }
+.filter-section h3 { 
+  font-size:1rem; 
+  color: rgba(173, 216, 230, 0.9); /* blu e çelët luksoze për titujt */
+  margin-bottom:10px; 
+  z-index: 10000;
+}
+
+/* Fjalet e filter-it ne bllok */
+#genderFilter label,
+#brandFilter label,
+#mlFilter label {
+  display:block;
+  margin-bottom:6px;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+.filter-section1{
+  margin-bottom: 100px;
+}
+#productsContainer {
+  flex:1;
+  margin:20px 4%;
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  gap:40px 10px;
+}
+
+
+.product-card {
+ /* background: linear-gradient(180deg,#111,#1a1a1a);*/
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  transition:0.3s;
+  cursor:pointer;
+  border:3px solid #5ba1ad(22, 27, 86, 0.5);
+  background-color: rgba(255,255,255,0.1);
+}
+
+.product-card:hover { transform: translateY(-5px); border-color: #5ba1ad(22, 27, 86, 0.5)}
+
+.product-card img { 
+  width:100%; 
+  height:300px;        /* fix the height for all images */
+  object-fit:cover;    /* will fill the box, cropping evenly if needed */
+  object-position:center; /* center the crop on both x and y axes */
+  margin-bottom:10px; 
+  background-color: white;
+}
+
+.product-info { flex:1; display:flex; padding:8px; flex-direction:column; justify-content:space-between; }
+
+.product-info h4 { margin:0; font-weight:600; font-size:1rem; }
+.product-info .brand { font-size:0.85rem; color:#aaa; }
+.product-info .desc { font-size:0.8rem; color:#ccc; margin:4px 0; }
+.product-info .meta { display:flex; justify-content:space-between; font-size:0.9rem; color:#5ba1ad; /* blu e ndezur për çmimet dhe info */ }
+
+#pagination { margin:20px 0; text-align:center;}
+.page-btn { background:none; border:1px solid #fff; margin:0 4px; padding:4px 8px; border-radius:4px; cursor:pointer; color:#fff; transition:0.3s; }
+.page-btn.active, .page-btn:hover { background:#3498db; color:#000; } /* blu për hover/active */
+
+.product-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card a:hover {
+  color: inherit;
+}
+
+@media(max-width:900px){#productsContainer{grid-template-columns:repeat(4,1fr);}}
+@media(max-width:767px){
+
+  #productsContainer {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .product-card img{
+    height: 250px;  
+    width: 100%;
+  }
+  .search-filter-container {
+    display: flex;
+    margin: 50px 5%;
+  }
+  .search-box-container {
+    flex: 7; /* 4 pjesë nga 6 */
+  }
+}
+/* ============================= */
+/* FIX: Search + Filter Layout  */
+/* ============================= */
+
+.search-filter-container {
+  display: flex;
+  flex-direction: column; /* search sipër */
+  gap: 12px;
+  margin: 40px 15%;
+}
+
+/* Search full width */
+.search-box-container {
+  width: 100%;
+  position: relative;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+}
+
+/* Clear Search FIX */
+#clearSearch {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+#searchInput:not(:placeholder-shown) + #clearSearch {
+  display: block;
+}
+
+/* ============================= */
+/* Filter + Clear Buttons       */
+/* ============================= */
+
+.filter-buttons-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Secila merr gjysmën */
+#filterToggle,
+#clearFiltersBtn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Filter button */
+#filterToggle {
+  background: rgba(227, 229, 231, 0.8);
+  color: black;
+}
+
+/* Clear Filters */
+#clearFiltersBtn {
+  background: #f44336;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+#clearFiltersBtn:hover {
+  background: #d32f2f;
+}
+/* Filter button keep style */
+#filterToggle {
+  background: rgba(227, 229, 231, 0.8);
+  color: black;
+}
+
+/* Clear Filters NEW STYLE */
+#clearFiltersBtn {
+  background: #f44336;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+#clearFiltersBtn:hover {
+  background: #d32f2f;
+}
+
+/* ============================= */
+/* MOBILE FIX                   */
+/* ============================= */
+
+@media(max-width:767px){
+
+  .search-filter-container {
+    margin: 30px 5%;
+  }
+
+  #searchInput {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .filter-buttons-row {
+    flex-direction: row; /* poshtë njëri tjetrit */
+  }
+
+  #filterToggle,
+  #clearFiltersBtn {
+    width: 100%;
+  }
+}

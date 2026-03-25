@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/female.css">
+</head>
+<body>
+    <body>
+        <div class="pre-header">  
+            Welcome
+        </div>
+        <header>
+          <button id="menu-btn" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+              <div class="header1">
+             <h1>Perfumes</h1>
+              </div>
+          <div class="logo logo-space">
+            <a href="cart.html" class="cart-link">
+              🛒
+              <span id="cartCount" class="cart-badge">0</span>
+            </a>
+          </div>
+        </header>
+        <nav id="side-menu" class="side-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfumes.html">Parfumet</a></li>
+            <li><a href="cart.html">Porosit</a></li>
+            <li><a href="https://maps.app.goo.gl/mya5yuU6NLnMuDQe7?g_st=ic">Vendndodhja</a></li>
+          </ul>
+       </nav>
+   <div class="search-filter-container">
+  <div class="search-box-container">
+    <input type="text" id="searchInput" placeholder="Kërko parfume...">
+    <button id="clearSearch">✕</button>
+  </div>
+
+  <div class="filter-buttons-row">
+    <div id="filterToggle">Filter</div>
+  </div>
+</div>
+  
+          <main>
+            <aside id="filterPanel">
+              <h2>Filters</h2>
+              <div class="filter-section">
+                <h3>Gender</h3>
+                <div id="genderFilter"></div>
+              </div>
+              <div class="filter-section">
+                <h3>Brand</h3>
+                <div id="brandFilter"></div>
+              </div>
+              <div class="filter-section">
+                <h3>Volume (ml)</h3>
+                <div id="mlFilter"></div>
+              </div>
+              <div class="filter-section filter-section1">
+                <h3>Price (ALL)</h3>
+                <input type="range" id="priceRange" min="2000" max="50000" step="5">
+                <span id="priceValue"></span>
+              </div>
+            </aside>
+        
+            <section id="productsContainer"></section>
+
+          </main>
+                  <div id="pagination"></div>
+                  <div id="footer-root"></div>
+  <script src="javascript_files.js/footer.js"></script>
+  <script src="javascript_files.js/general.js"></script>
+  <script src="javascript_files.js/products.js"></script>
+  <script src="javascript_files.js/female.js"></script>
+ 
+</body>
+</html>

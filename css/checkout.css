@@ -1,0 +1,202 @@
+/* Body & Main */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1f1f1f;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* Order Summary */
+.order-summary {
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px #00000066;
+}
+
+.order-summary h2 {
+    color: #98dae6;
+    margin-bottom: 15px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+.order-item div p {
+    margin: 2px 0;
+}
+
+#deliveryInfo, #orderTotal {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #98dae6;
+}
+
+/* Checkout Form */
+.checkout-form {
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px #00000066;
+}
+
+.checkout-form h2 {
+    color: #98dae6;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #1f1f1f;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(8, 62, 98, 0.8);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0088cc;
+}
+
+/* Thank You Message */
+#thankYouMessage {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    background: #004466;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Prefix + Phone */
+.prefix-style-dropdown {
+    display: flex;
+    gap: 10px; /* hapësirë midis prefix + numër */
+    position: relative;
+}
+
+.prefix-style-dropdown input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.prefix-style-dropdown input:focus {
+    border-color: #0088cc;
+    outline: none;
+}
+
+/* Dropdown i prefikseve */
+.prefix-style-dropdown ul.dropdown,
+.city-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.prefix-style-dropdown ul.dropdown li,
+.city-dropdown ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.prefix-style-dropdown ul.dropdown li:hover,
+.city-dropdown ul li:hover {
+    background: #0088cc;
+    color: #fff;
+}
+
+/* Hide dropdown initially */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    input, select, button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+ 
+
+    .prefix-style-dropdown ul.dropdown li,
+    .city-dropdown ul li {
+        padding: 12px;
+    }
+}

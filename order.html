@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Aroma Jote</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <header>
+    <button id="menu-btn" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+        <div class="header1">
+       <h1></h1>
+        </div>
+    <div class="logo logo-space">
+      <a href="cart.html" class="cart-link">
+        🛒
+        <span id="cartCount" class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="perfumes.html">Parfumet</a></li>
+      <li><a href="cart.html">Porosit</a></li>
+      <li><a href="https://maps.app.goo.gl/mya5yuU6NLnMuDQe7?g_st=ic">Vendndodhja</a></li>
+    </ul>
+ </nav>
+
+
+  <main>
+    <section class="order-summary">
+      <h2>Porosia Juaj</h2>
+      <div id="orderItems"></div>
+      <p id="deliveryInfo"></p>
+      <p id="orderTotal"></p>
+    </section>
+
+    <section class="checkout-form">
+      <h2>Detajet e Klientit</h2>
+      <form id="checkoutForm" method="POST" action="https://api.staticforms.dev/submit">
+
+        <input type="hidden" name="apiKey" value="sf_ka2cla9jfbi31f8f458khlfk">
+        <input type="hidden" name="subject" value="Porosia nga Aroma Jote">
+
+        <label>Emri *</label>
+        <input type="text" name="first_name" id="firstName" required>
+
+        <label>Mbiemri *</label>
+        <input type="text" name="last_name" id="lastName" required>
+
+        <label>Email *</label>
+        <input type="email" name="email" id="email" required>
+
+<div class="input-wrapper">
+  <label for="cityInput">Qyteti *</label>
+  <div class="prefix-style-dropdown">
+    <input type="text" id="cityInput" name="city"  required autocomplete="off">
+    <ul id="cityDropdown" class="dropdown hidden">
+      <li>Tirana</li>
+<li>Durrës</li>
+<li>Shkodër</li>
+<li>Vlorë</li>
+<li>Elbasan</li>
+<li>Fier</li>
+<li>Korçë</li>
+<li>Berat</li>
+<li>Lushnjë</li>
+<li>Pogradec</li>
+<li>Kavajë</li>
+<li>Laç</li>
+<li>Lezhë</li>
+<li>Kukës</li>
+<li>Gjirokastër</li>
+<li>Sarandë</li>
+<li>Patos</li>
+<li>Ballsh</li>
+<li>Rrëshen</li>
+<li>Burrel</li>
+<li>Gramsh</li>
+<li>Librazhd</li>
+<li>Përmet</li>
+<li>Tepelenë</li>
+<li>Delvinë</li>
+<li>Konispol</li>
+<li>Ersekë</li>
+<li>Bilisht</li>
+<li>Pukë</li>
+<li>Bajram Curri</li>
+<li>Vorë</li>
+<li>Kamëz</li>
+<li>Fushë-Krujë</li>
+<li>Krujë</li>
+<li>Roskovec</li>
+<li>Peqin</li>
+<li>Cërrik</li>
+<li>Divjakë</li>
+<li>Himarë</li>
+<li>Orikum</li>
+<li>Selenicë</li>
+<li>Poliçan</li>
+<li>Kuçovë</li>
+<li>Memaliaj</li>
+<li>Këlcyrë</li>
+<li>Rubik</li>
+<li>Milot</li>
+<li>Mamurras</li>
+<li>Rrogozhinë</li>
+<li>Përrenjas</li>
+    </ul>
+  </div>
+</div>
+
+<div class="input-wrapper">
+  <label>Nr. Tel *</label>
+  <div class="prefix-style-dropdown" id="phoneWrapper" style="display:flex; gap:5px;">
+    <input type="text" id="phonePrefixInput" placeholder="+355 Albania" readonly required style="flex:0 0 150px;">
+    <ul class="dropdown hidden" id="phoneDropdown">
+       <li data-value="+93">Afghanistan +93</li>
+    <li data-value="+355">Albania +355</li>
+    <li data-value="+213">Algeria +213</li>
+    <li data-value="+1">American Samoa +1</li>
+    <li data-value="+376">Andorra +376</li>
+    <li data-value="+244">Angola +244</li>
+    <li data-value="+1">Anguilla +1</li>
+    <li data-value="+1">Antigua and Barbuda +1</li>
+    <li data-value="+54">Argentina +54</li>
+    <li data-value="+374">Armenia +374</li>
+    <li data-value="+297">Aruba +297</li>
+    <li data-value="+61">Australia +61</li>
+    <li data-value="+43">Austria +43</li>
+    <li data-value="+994">Azerbaijan +994</li>
+    <li data-value="+1">Bahamas +1</li>
+    <li data-value="+973">Bahrain +973</li>
+    <li data-value="+880">Bangladesh +880</li>
+    <li data-value="+1">Barbados +1</li>
+    <li data-value="+375">Belarus +375</li>
+    <li data-value="+32">Belgium +32</li>
+    <li data-value="+501">Belize +501</li>
+    <li data-value="+229">Benin +229</li>
+    <li data-value="+1">Bermuda +1</li>
+    <li data-value="+975">Bhutan +975</li>
+    <li data-value="+591">Bolivia +591</li>
+    <li data-value="+599">Bonaire +599</li>
+    <li data-value="+387">Bosnia and Herzegovina +387</li>
+    <li data-value="+267">Botswana +267</li>
+    <li data-value="+55">Brazil +55</li>
+    <li data-value="+1">British Virgin Islands +1</li>
+    <li data-value="+673">Brunei +673</li>
+    <li data-value="+359">Bulgaria +359</li>
+    <li data-value="+226">Burkina Faso +226</li>
+    <li data-value="+257">Burundi +257</li>
+    <li data-value="+855">Cambodia +855</li>
+    <li data-value="+237">Cameroon +237</li>
+    <li data-value="+1">Canada +1</li>
+    <li data-value="+238">Cape Verde +238</li>
+    <li data-value="+1">Cayman Islands +1</li>
+    <li data-value="+236">Central African Rep. +236</li>
+    <li data-value="+235">Chad +235</li>
+    <li data-value="+56">Chile +56</li>
+    <li data-value="+86">China +86</li>
+    <li data-value="+57">Colombia +57</li>
+    <li data-value="+269">Comoros +269</li>
+    <li data-value="+242">Congo +242</li>
+    <li data-value="+682">Cook Islands +682</li>
+    <li data-value="+506">Costa Rica +506</li>
+    <li data-value="+225">Côte d'Ivoire +225</li>
+    <li data-value="+385">Croatia +385</li>
+    <li data-value="+53">Cuba +53</li>
+    <li data-value="+599">Curaçao +599</li>
+    <li data-value="+357">Cyprus +357</li>
+    <li data-value="+420">Czech Rep. +420</li>
+    <li data-value="+850">Dem. People's Rep. of Korea +850</li>
+    <li data-value="+243">Dem. Rep. of the Congo +243</li>
+    <li data-value="+45">Denmark +45</li>
+    <li data-value="+246">Diego Garcia +246</li>
+    <li data-value="+253">Djibouti +253</li>
+    <li data-value="+1">Dominica +1</li>
+    <li data-value="+1">Dominican Rep. +1</li>
+    <li data-value="+593">Ecuador +593</li>
+    <li data-value="+20">Egypt +20</li>
+    <li data-value="+503">El Salvador +503</li>
+    <li data-value="+240">Equatorial Guinea +240</li>
+    <li data-value="+291">Eritrea +291</li>
+    <li data-value="+372">Estonia +372</li>
+    <li data-value="+251">Ethiopia +251</li>
+    <li data-value="+500">Falkland Islands +500</li>
+    <li data-value="+298">Faroe Islands +298</li>
+    <li data-value="+679">Fiji +679</li>
+    <li data-value="+358">Finland +358</li>
+    <li data-value="+33">France +33</li>
+    <li data-value="+262">French Dep. +262</li>
+    <li data-value="+594">French Guiana +594</li>
+    <li data-value="+689">French Polynesia +689</li>
+    <li data-value="+241">Gabon +241</li>
+    <li data-value="+220">Gambia +220</li>
+    <li data-value="+995">Georgia +995</li>
+    <li data-value="+49">Germany +49</li>
+    <li data-value="+233">Ghana +233</li>
+    <li data-value="+350">Gibraltar +350</li>
+    <li data-value="+30">Greece +30</li>
+    <li data-value="+299">Greenland +299</li>
+    <li data-value="+1">Grenada +1</li>
+    <li data-value="+590">Guadeloupe +590</li>
+    <li data-value="+1">Guam +1</li>
+    <li data-value="+502">Guatemala +502</li>
+    <li data-value="+224">Guinea +224</li>
+    <li data-value="+245">Guinea-Bissau +245</li>
+    <li data-value="+592">Guyana +592</li>
+    <li data-value="+509">Haiti +509</li>
+    <li data-value="+504">Honduras +504</li>
+    <li data-value="+852">Hong Kong +852</li>
+    <li data-value="+36">Hungary +36</li>
+    <li data-value="+354">Iceland +354</li>
+    <li data-value="+91">India +91</li>
+    <li data-value="+62">Indonesia +62</li>
+    <li data-value="+98">Iran +98</li>
+    <li data-value="+964">Iraq +964</li>
+    <li data-value="+353">Ireland +353</li>
+    <li data-value="+972">Israel +972</li>
+    <li data-value="+39">Italy +39</li>
+    <li data-value="+1">Jamaica +1</li>
+    <li data-value="+81">Japan +81</li>
+    <li data-value="+962">Jordan +962</li>
+    <li data-value="+7">Kazakhstan +7</li>
+    <li data-value="+254">Kenya +254</li>
+    <li data-value="+686">Kiribati +686</li>
+    <li data-value="+82">Korea +82</li>
+    <li data-value="+965">Kuwait +965</li>
+    <li data-value="+996">Kyrgyzstan +996</li>
+    <li data-value="+856">Lao P.D.R. +856</li>
+    <li data-value="+371">Latvia +371</li>
+    <li data-value="+961">Lebanon +961</li>
+    <li data-value="+266">Lesotho +266</li>
+    <li data-value="+231">Liberia +231</li>
+    <li data-value="+218">Libya +218</li>
+    <li data-value="+423">Liechtenstein +423</li>
+    <li data-value="+370">Lithuania +370</li>
+    <li data-value="+352">Luxembourg +352</li>
+    <li data-value="+853">Macao +853</li>
+    <li data-value="+261">Madagascar +261</li>
+    <li data-value="+265">Malawi +265</li>
+    <li data-value="+60">Malaysia +60</li>
+    <li data-value="+960">Maldives +960</li>
+    <li data-value="+223">Mali +223</li>
+    <li data-value="+356">Malta +356</li>
+    <li data-value="+692">Marshall Islands +692</li>
+    <li data-value="+596">Martinique +596</li>
+    <li data-value="+222">Mauritania +222</li>
+    <li data-value="+230">Mauritius +230</li>
+    <li data-value="+52">Mexico +52</li>
+    <li data-value="+691">Micronesia +691</li>
+    <li data-value="+373">Moldova +373</li>
+    <li data-value="+377">Monaco +377</li>
+    <li data-value="+976">Mongolia +976</li>
+    <li data-value="+382">Montenegro +382</li>
+    <li data-value="+1">Montserrat +1</li>
+    <li data-value="+212">Morocco +212</li>
+    <li data-value="+258">Mozambique +258</li>
+    <li data-value="+95">Myanmar +95</li>
+    <li data-value="+264">Namibia +264</li>
+    <li data-value="+674">Nauru +674</li>
+    <li data-value="+977">Nepal +977</li>
+    <li data-value="+31">Netherlands +31</li>
+    <li data-value="+687">New Caledonia +687</li>
+    <li data-value="+64">New Zealand +64</li>
+    <li data-value="+505">Nicaragua +505</li>
+    <li data-value="+227">Niger +227</li>
+    <li data-value="+234">Nigeria +234</li>
+    <li data-value="+235">Niger +227</li>
+<li data-value="+234">Nigeria +234</li>
+<li data-value="+683">Niue +683</li>
+<li data-value="+672">Norfolk Island +672</li>
+<li data-value="+47">Norway +47</li>
+<li data-value="+968">Oman +968</li>
+<li data-value="+92">Pakistan +92</li>
+<li data-value="+680">Palau +680</li>
+<li data-value="+970">Palestine +970</li>
+<li data-value="+507">Panama +507</li>
+<li data-value="+675">Papua New Guinea +675</li>
+<li data-value="+595">Paraguay +595</li>
+<li data-value="+51">Peru +51</li>
+<li data-value="+63">Philippines +63</li>
+<li data-value="+48">Poland +48</li>
+<li data-value="+351">Portugal +351</li>
+<li data-value="+1">Puerto Rico +1</li>
+<li data-value="+974">Qatar +974</li>
+<li data-value="+40">Romania +40</li>
+<li data-value="+7">Russia +7</li>
+<li data-value="+250">Rwanda +250</li>
+<li data-value="+590">Saint Barthélemy +590</li>
+<li data-value="+290">Saint Helena +290</li>
+<li data-value="+1">Saint Kitts and Nevis +1</li>
+<li data-value="+1">Saint Lucia +1</li>
+<li data-value="+508">Saint Pierre and Miquelon +508</li>
+<li data-value="+1">Saint Vincent and the Grenadines +1</li>
+<li data-value="+685">Samoa +685</li>
+<li data-value="+378">San Marino +378</li>
+<li data-value="+239">Sao Tome and Principe +239</li>
+<li data-value="+966">Saudi Arabia +966</li>
+<li data-value="+221">Senegal +221</li>
+<li data-value="+381">Serbia +381</li>
+<li data-value="+248">Seychelles +248</li>
+<li data-value="+232">Sierra Leone +232</li>
+<li data-value="+65">Singapore +65</li>
+<li data-value="+421">Slovakia +421</li>
+<li data-value="+386">Slovenia +386</li>
+<li data-value="+677">Solomon Islands +677</li>
+<li data-value="+252">Somalia +252</li>
+<li data-value="+27">South Africa +27</li>
+<li data-value="+500">South Georgia & South Sandwich Islands +500</li>
+<li data-value="+211">South Sudan +211</li>
+<li data-value="+34">Spain +34</li>
+<li data-value="+94">Sri Lanka +94</li>
+<li data-value="+249">Sudan +249</li>
+<li data-value="+597">Suriname +597</li>
+<li data-value="+268">Swaziland +268</li>
+<li data-value="+46">Sweden +46</li>
+<li data-value="+41">Switzerland +41</li>
+<li data-value="+963">Syria +963</li>
+<li data-value="+886">Taiwan +886</li>
+<li data-value="+992">Tajikistan +992</li>
+<li data-value="+255">Tanzania +255</li>
+<li data-value="+66">Thailand +66</li>
+<li data-value="+670">Timor-Leste +670</li>
+<li data-value="+228">Togo +228</li>
+<li data-value="+690">Tokelau +690</li>
+<li data-value="+676">Tonga +676</li>
+<li data-value="+1">Trinidad and Tobago +1</li>
+<li data-value="+216">Tunisia +216</li>
+<li data-value="+90">Turkey +90</li>
+<li data-value="+993">Turkmenistan +993</li>
+<li data-value="+688">Tuvalu +688</li>
+<li data-value="+256">Uganda +256</li>
+<li data-value="+380">Ukraine +380</li>
+<li data-value="+971">United Arab Emirates +971</li>
+<li data-value="+44">United Kingdom +44</li>
+<li data-value="+1">United States +1</li>
+<li data-value="+598">Uruguay +598</li>
+<li data-value="+998">Uzbekistan +998</li>
+<li data-value="+678">Vanuatu +678</li>
+<li data-value="+379">Vatican City +379</li>
+<li data-value="+58">Venezuela +58</li>
+<li data-value="+84">Vietnam +84</li>
+<li data-value="+681">Wallis & Futuna +681</li>
+<li data-value="+212">Western Sahara +212</li>
+<li data-value="+967">Yemen +967</li>
+<li data-value="+260">Zambia +260</li>
+<li data-value="+263">Zimbabwe +263</li>
+      
+      <!-- shto më shumë sipas nevojës -->
+    </ul>
+    <input type="tel" id="phone" name="phone" placeholder="Numri i telefonit" pattern="[0-9]{6,15}" required style="flex:1;">
+  </div>
+  <small>Nëse numri eshte i huaj, duhet te keni WhatsApp qe t'ju kontaktojme.</small>
+</div>
+<label>Adresa *</label>
+<input type="text" name="address" id="address" required>
+        <label>Komente (opsionale)</label>
+        <textarea name="comments" id="comments" placeholder="Lëre ndonjë mesazh..."></textarea>
+        <input type="hidden" name="products" id="productsField">
+        <button type="submit">Dërgo Porosinë</button>
+      </form>
+
+      <div id="thankYouMessage" class="hidden"></div>
+    </section>
+  </main>
+  <div id="footer-root"></div>
+
+  <script src="javascript_files.js/footer.js"></script>  
+  <script src="javascript_files.js/general.js"></script>
+  <script src="javascript_files.js/checkout.js"></script>
+
+</body>
+</html>

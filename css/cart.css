@@ -1,0 +1,118 @@
+body {
+    background-color: #0f0f0f;
+    color: #e5e5e5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    max-width: 1000px;
+    margin: 80px auto 50px auto;
+    padding: 0 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.cart-item:hover {
+    transform: translateY(-3px);
+}
+
+.cart-item img {
+    width: 70px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+    background-color: white;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #5ba1ad;
+}
+
+.cart-item-info .variant {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.removeBtn {
+    background: rgb(190, 38, 38);
+    border: none;
+    padding: 8px 14px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.removeBtn:hover {
+    background: #e55;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.cart-summary h3 {
+    font-size: 1.2rem;
+    color: #83e4ad;
+}
+.cart-summary button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#checkoutBtn {
+    background: linear-gradient(90deg, #34646e, #5ba1ad);
+    color: #0f0f0f;
+}
+
+#checkoutBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(51, 144, 177, 0.5);
+}
+
+#clearCartBtn {
+    background: #444;
+    color: #fff;
+}
+
+#clearCartBtn:hover {
+    background: #666;
+}
+
+.empty {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+    margin: 20px 0;
+}
+/* Heq underline tek emri i produktit */
+.cart-item a {
+    text-decoration: none !important; /* forcon që të hiqet underline */
+    color: inherit;                   /* merr ngjyrën e rrethit */
+    display: inline-block;            /* siguron që text-decoration të aplikohet saktë */
+}

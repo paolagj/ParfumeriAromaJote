@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+  <header>
+    <!-- Hamburger majtas -->
+    <button id="menu-btn" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+        <div class="header1">
+       <h1></h1>
+        </div>
+    <!-- Logo djathtas -->
+    <div class="logo logo-space">
+      <a href="cart.html" class="cart-link">
+        🛒
+        <span id="cartCount" class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="perfumes.html">Parfumet</a></li>
+      <li><a href="cart.html">Porosit</a></li>
+      <li><a href="https://maps.app.goo.gl/mya5yuU6NLnMuDQe7?g_st=ic">Vendndodhja</a></li>
+    </ul>
+ </nav>
+    <div class="cart-container">
+        <div id="cartItems"></div>
+        <div class="cart-summary">
+            <h3>Total: <span id="cartTotal">0</span> ALL</h3>
+            <button id="checkoutBtn">Checkout</button>
+            <button id="clearCartBtn">Clear Cart</button>
+        </div>
+    </div>
+  </nav>
+    <div id="footer-root"></div>
+    <script src="javascript_files.js/footer.js"></script>
+    <script src="javascript_files.js/general.js"></script>
+    <script src="javascript_files.js/cart.js"></script>
+</body>
+</html>

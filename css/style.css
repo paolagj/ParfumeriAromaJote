@@ -1,0 +1,511 @@
+.home-pic{
+  height: 100vh;
+  width: 100%;
+  background-image: url("/img//home/home_photo7.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+  
+  /* overlay luksoz (gradient i errët) */
+  .hero-overlay{
+    position: absolute;
+    inset: 0;
+   background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.45) 0%,
+      rgba(0,0,0,0.25) 40%,
+      rgba(0,0,0,0.45) 100%
+    );
+    z-index: 1;
+  }
+  
+  /* text luksoz */
+  .main-body{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+  }
+  
+  .main-body-title{
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 90px);
+    letter-spacing: 2px;
+    color: #f5f5f5;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+  
+  .main-body-description{
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* search box luksoz */
+  .search-box{
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    max-width: 650px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    margin-bottom: 270px;
+  
+    background: rgba(20,20,20,0.55);
+    backdrop-filter: blur(10px);
+  
+    border: 1px solid rgba(255,255,255,0.12);
+  
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.45),
+      inset 0 1px 1px rgba(255,255,255,0.08);
+  
+    transition: 0.35s ease;
+  }
+  
+  .search-box:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  }
+  
+  /* input */
+  .search-box input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+  .search-box input::placeholder{
+    color: rgba(255,255,255,0.5);
+  }
+  
+  /* dropdown results */
+  .search-results{
+    margin-top: 10px;
+    background: rgba(15,15,15,0.85);
+    border-radius: 12px;
+    display: none;
+    overflow: hidden;
+    max-height: 220px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .search-results div{
+    padding: 12px 14px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .search-results div:hover{
+    background: rgba(255,255,255,0.12);
+  }
+ 
+  .hapesira1{
+    height: 25px;
+    width:100%;
+    margin-bottom: 60px;
+  }  
+  .hapesira12{
+    margin-bottom: 70px;
+    background: #aaa;
+    height: 60px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .brand{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand img{
+    width: 75%;
+    height: 90%;
+    object-fit: contain; /* ruan formen origjinale */
+  }
+
+
+ /* ===== MEDIA QUERIES PËR HOME BG & BRANDS ===== */
+ @media (max-width: 900px){ 
+  .hapesira12{ 
+    height: 50px; 
+    gap: 6px; } } /* 📱 Responsive - mobile */ 
+    @media (max-width: 600px){ .hapesira12{ height: auto; width:100%; gap:10px; } .brand img{ width: 100%; } } /* 📱 Mobile i vogel */ 
+    @media (max-width: 400px){ .hapesira12{gap:3px;}.brand img{ width:100% /* 3 logo per rresht */ } }
+/* ===== MEDIA QUERIES ONLY FOR HOME BG ===== */
+
+  
+  .home-text-modern {
+    color: #ffffff;
+    max-width: 1400px;
+    margin: 20px auto 40px auto;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px; /* pak padding për mobile */
+  }
+  
+  .home-text-modern .headline {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(24px, 4vw, 30px);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+  
+  .home-text-modern .paragraph {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+  
+  /* ===== MEDIA QUERIES ===== */
+  
+  /* Tablet: 768px - 1024px */
+  @media (max-width: 1024px) {
+    .home-text-modern {
+      max-width: 90%;
+    }
+  
+    .home-text-modern .headline {
+      font-size: clamp(22px, 5vw, 28px);
+      margin-bottom: 10px;
+    }
+  
+    .home-text-modern .paragraph {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+  
+  /* Mobile: 480px - 767px */
+  @media (max-width: 767px) {
+    .home-text-modern {
+      max-width: 95%;
+      margin: 15px auto 30px auto;
+      text-align: left; /* më e lehtë për lexim në mobile */
+    }
+  
+    .home-text-modern .headline {
+      font-size: clamp(20px, 6vw, 26px);
+      text-align: left;
+    }
+  
+    .home-text-modern .paragraph {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .home-pic{height:75vh;}
+  }
+  
+  /* Very small screens: <480px */
+  @media (max-width: 480px) {
+    .home-text-modern .headline {
+      font-size: clamp(18px, 7vw, 24px);
+    }
+  
+    .home-text-modern .paragraph {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .home-pic{height:50vh;}
+    .search-box{
+      margin-bottom: 150px;
+    }
+  }
+  
+
+
+
+  .top {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .top-3 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 12px; 
+    padding: 0 12px; 
+    box-sizing: border-box;
+  }
+  
+  .img-container {
+    flex: 1; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px; 
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.4s ease;
+    display: block;
+  }
+  
+
+  .img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 20px;
+    color: white;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.15),
+      transparent
+    );
+    transition: all 0.4s ease;
+  }
+  
+  .img-overlay h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .img-overlay p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+    max-width: 90%;
+  }
+  
+
+  .img-container:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  }
+  
+  .img-container:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.9);
+  }
+  
+  .img-container:hover .img-overlay {
+    padding-bottom: 28px;
+  }
+  
+
+  .img-container:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 550px) {
+    .top {
+      height: auto;
+    }
+  
+    .top-3 {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .img-container {
+      height: 220px;
+    }}
+  
+  body {
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .perfume-slider {
+    width: 100%;
+    padding: 40px 0px;
+    background:  rgb(38, 38, 38);
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  /* carousel container */
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-wrapper {
+    overflow: hidden;
+    flex: 1; /* zë hapësirë për cards */
+  }
+  
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+  }
+  
+  /* cards */
+  .perfume-card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 0 auto;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .perfume-card:hover { transform: scale(1.03); }
+  
+  .perfume-img img { width: 100%; height: 240px; object-fit: cover; }
+  
+  .perfume-info { padding: 10px; flex:1; display: flex; flex-direction: column; justify-content: space-evenly; }
+  .perfume-header { display: flex; justify-content: space-between; align-items: center; margin-bottom:6px; }
+  .perfume-name { font-weight:bold; font-size:16px; }
+  .perfume-ml { font-size:14px; color:#ccc; margin-left:5px; }
+  .perfume-price { font-weight:bold; color:#5ba1ad; }
+  .perfume-desc { font-size:13px; color:#aaa; margin-top:5px; }
+  
+  /* buttons brenda carousel */
+  .prev, .next {
+    font-size:28px;
+    color:#fff;
+    background: rgba(255,255,255,0.05);
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    border-radius:50%;
+    z-index:10;
+  }
+  
+  .prev:hover, .next:hover { background: rgba(255,255,255,0.15); }
+  
+  .prev { margin-right: 10px; }
+  .next { margin-left: 10px; }
+  
+  /* responsive card widths */
+  @media(min-width:1024px){ .perfume-card{ width: calc((100% - 4*20px)/5); } }  /* desktop 5 cards */
+  @media(min-width:768px) and (max-width:1023px){ .perfume-card{ width: calc((100% - 3*20px)/4); } } /* tablet 4 cards */
+  @media(max-width:767px){ .perfume-card{ width: calc((100% - 1*20px)/2); } } /* mobile 2 cards */
+
+  .hero-slider1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slide1 {
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide1.active {
+    opacity: 1;
+  }
+  /* Tablet */
+@media (max-width: 900px) {
+  .hero-slider1 {
+    height: 70vh; /* ul lartësinë për tablet */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero-slider1 {
+    height: 50vh; /* ul lartësinë më shumë për mobile */
+  }
+
+  .slide1 {
+    background-size: cover; /* mund të përdoret contain nëse duhet të shfaqet e gjithë foto */
+    background-position: center center;
+  }
+}
+
+/* Very small mobile */
+@media (max-width: 400px) {
+  .hero-slider1 {
+    height: 40vh; /* më e vogël për ekran super të vogël */
+  }
+}
+
+.search-results{
+  position:absolute;
+  top:45px;
+  width:100%;
+  background:#111;
+  border-radius:6px;
+  overflow:hidden;
+  display:none;
+  z-index:999;
+}
+
+.search-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  cursor:pointer;
+  border-bottom:1px solid #333;
+}
+
+.search-item img{
+  width:40px;
+  height:40px;
+  object-fit:cover;
+}
+
+.search-item:hover{
+  background:#222;
+}
+
+.s-name{
+  display:block;
+  font-size:14px;
+}
+
+.s-brand{
+  font-size:12px;
+  color:#888;
+}
