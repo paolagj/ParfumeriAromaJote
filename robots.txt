@@ -1,0 +1,4 @@
+txt id="7sx23a"
+
+User-agent:*
+Disallow:
