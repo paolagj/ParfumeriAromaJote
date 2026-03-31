@@ -974,10 +974,21 @@ const productsData = [
   desc: "Një set luksoz dhe elegant që përfshin parfum 75 ml, mini parfum 10 ml dhe body lotion 50 ml, i ndërtuar rreth aromës ikonike Dolce & Gabbana The One. Me nota të ngrohta të mandarinës, trëndafilit dhe vaniljes, krijon një kombinim perfekt mes elegancës dhe sensualitetit, duke dhënë një prezencë të butë, femërore dhe shumë tërheqëse me qëndrueshmëri të lartë.",
   img:"../img/parfumet/203.webp"
 },
-{ id:"204", name:"King", brand:"Dolce & Gabbana", gender:"male",
+{ id:"204", name:"Set King", brand:"Dolce & Gabbana", gender:"male",
   variants:[ {ml:100, price:14000}],
   desc: "Një set modern dhe karizmatik që përfshin parfum 100 ml, deodorant stick dhe shampo 50 ml, i ndërtuar rreth aromës energjike Dolce & Gabbana K. Me nota të freskëta agrumesh, livando dhe bazë druri me patchouli e vetiver, krijon një kombinim perfekt mes freskisë dhe maskulinitetit, duke dhënë një prezencë të fortë, elegante dhe shumë tërheqëse për çdo moment të ditës.",
   img:"../img/parfumet/204.webp"
 },
 
+{ id:"205", name:"Ambassador", brand:"Ambassador", gender:"male",
+  variants:[ { ml:50, price:9500 }, { ml:100, price:13000 } ],
+  desc: "Një aromë moderne dhe karizmatike me kombinim të freskisë frutore dhe thellësisë drunore, me nota të mandarinës, mollës dhe mango të mbështetura nga vanilja dhe amber, për një prezencë të fortë, elegante dhe shumë tërheqëse.",
+  img:"../img/parfumet/205.webp"
+},
+
+{ id:"206", name:"Crystal Noir", brand:"Versace", gender:"female",
+  variants:[ { ml:50, price:9000 }, { ml:90, price:12500 } ],
+  desc: "Një aromë misterioze dhe sensuale me nota pikante dhe lule të bardha, e pasuruar me kokos dhe bazë të ngrohtë amber e musk, që krijon një prezencë elegante dhe shumë tërheqëse.",
+  img:"../img/parfumet/206.webp"
+},
 ];
