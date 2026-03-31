@@ -959,4 +959,9 @@ const productsData = [
   desc:"Një kompozim i sofistikuar dhe i thellë, me nota orientale dhe vaniljeje, për një prezencë të paharrueshme.",
   img:"../img/parfumet/200.webp"
 },
+{ id:"201", name:"Musc Nude", brand:"Narciso Rodrigues", gender:"female",
+  variants:[ { ml:50, price:8000 }, { ml:100, price:13000 } ],
+  desc: "Një aromë e butë dhe sensuale me musk, lule të bardha dhe nota të ngrohta, që krijon një efekt 'second skin' shumë tërheqës dhe elegant.",
+  img:"../img/parfumet/201.webp"
+},
 ];
