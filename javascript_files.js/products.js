@@ -992,7 +992,7 @@ const productsData = [
   desc: "Një aromë misterioze dhe sensuale me nota pikante dhe lule të bardha, e pasuruar me kokos dhe bazë të ngrohtë amber e musk, që krijon një prezencë elegante dhe shumë tërheqëse.",
   img:"../img/parfumet/206.webp"
 },
-{ id:"202", name:"The One Intense", brand:"Dolce & Gabbana", gender:"male",
+{ id:"207", name:"The One Intense", brand:"Dolce & Gabbana", gender:"male",
   variants:[ { ml:50, price:10000 }, { ml:100, price:13000 } ],
   desc: "Një aromë e errët dhe magnetike me kombinim të notave pikante dhe drunore, ku kardamomi dhe neroli japin freski fillestare, ndërsa baza me lëkurë, patchouli dhe amber krijon një prezencë të thellë, elegante dhe shumë sensuale.",
   img:"../img/parfumet/207.webp"
