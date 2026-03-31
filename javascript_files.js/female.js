@@ -20,7 +20,7 @@ filterToggle.parentElement.appendChild(clearFiltersBtn);
 
 // --- Variables ---
 let currentPage = 1;
-let perPage = 20;
+let perPage = 30;
 const pageKey = location.pathname.includes("perfumes") ? "perfumesFilters" : "homeFilters";
 
 // --- Normalize variants ---
