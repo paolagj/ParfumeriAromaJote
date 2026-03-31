@@ -39,7 +39,7 @@ priceValue.innerText = `Max: ALL${priceRange.value}`;
 // --- Unique filter values ---
 const genders = [...new Set(productsData.map(p => p.gender))];
 const brands = [...new Set(productsData.map(p => p.brand))];
-const mls = [30,50,60,75,90,100,125,150,200];
+const mls = [20,30,50,60,75,90,100,125,150,200];
 
 // --- Render filter checkboxes ---
 genders.forEach(g => {
