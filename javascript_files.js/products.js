@@ -969,4 +969,15 @@ const productsData = [
   desc: "Një aromë orientale dhe misterioze me nota agrumesh, lule portokalli dhe patchouli, e mbështetur nga baza e ngrohtë me amber dhe vanilje për një prezencë sensuale dhe të paharrueshme.",
   img:"../img/parfumet/202.webp"
 },
+{ id:"203", name:"Set The One", brand:"Dolce & Gabbana", gender:"female",
+  variants:[ {ml:75, price:14000}],
+  desc: "Një set luksoz dhe elegant që përfshin parfum 75 ml, mini parfum 10 ml dhe body lotion 50 ml, i ndërtuar rreth aromës ikonike Dolce & Gabbana The One. Me nota të ngrohta të mandarinës, trëndafilit dhe vaniljes, krijon një kombinim perfekt mes elegancës dhe sensualitetit, duke dhënë një prezencë të butë, femërore dhe shumë tërheqëse me qëndrueshmëri të lartë.",
+  img:"../img/parfumet/203.webp"
+},
+{ id:"204", name:"King", brand:"Dolce & Gabbana", gender:"male",
+  variants:[ {ml:100, price:14000}],
+  desc: "Një set modern dhe karizmatik që përfshin parfum 100 ml, deodorant stick dhe shampo 50 ml, i ndërtuar rreth aromës energjike Dolce & Gabbana K. Me nota të freskëta agrumesh, livando dhe bazë druri me patchouli e vetiver, krijon një kombinim perfekt mes freskisë dhe maskulinitetit, duke dhënë një prezencë të fortë, elegante dhe shumë tërheqëse për çdo moment të ditës.",
+  img:"../img/parfumet/204.webp"
+},
+
 ];
