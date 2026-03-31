@@ -232,7 +232,7 @@ const productsData = [
   id:"28", name:"Y EDP", brand:"YSL Yves Saint Laurent", gender:"male",
   variants:[ { ml:100, price:13500 } ],
   desc:"Një aromë moderne dhe energjike me nota fillestare të shkurreve të freskëta dhe mollës, zemrën me geranium dhe salvi, dhe bazën e drurit të qetë dhe ambra-s, që krijon një ekuilibër të fuqishëm dhe të sofistikuar.",
-  img:"../img/home/parfumet/top10-3.webp"
+  img:"../img/parfumet/top10-3.webp"
 },
 { id:"29", name:"Bloom Acqua Di Fiori", brand:"Gucci", gender:"female", 
   variants:[ {ml:50, price:10500 },{ ml:100, price:14000 } ],
@@ -964,6 +964,7 @@ const productsData = [
   desc: "Një aromë e butë dhe sensuale me musk, lule të bardha dhe nota të ngrohta, që krijon një efekt 'second skin' shumë tërheqës dhe elegant.",
   img:"../img/parfumet/201.webp"
 },
+
 { id:"202", name:"Jawhara", brand:"Maissa", gender:"unisex",
   variants:[ {ml:20, price:4000}, { ml:50, price:12000 }, { ml:100, price:19000 } ],
   desc: "Një aromë orientale dhe misterioze me nota agrumesh, lule portokalli dhe patchouli, e mbështetur nga baza e ngrohtë me amber dhe vanilje për një prezencë sensuale dhe të paharrueshme.",
@@ -990,5 +991,10 @@ const productsData = [
   variants:[ { ml:50, price:9000 }, { ml:90, price:12500 } ],
   desc: "Një aromë misterioze dhe sensuale me nota pikante dhe lule të bardha, e pasuruar me kokos dhe bazë të ngrohtë amber e musk, që krijon një prezencë elegante dhe shumë tërheqëse.",
   img:"../img/parfumet/206.webp"
+},
+{ id:"207", name:"The One Intense", brand:"Dolce & Gabbana", gender:"male",
+  variants:[ { ml:50, price:10000 }, { ml:100, price:13000 } ],
+  desc: "Një aromë e errët dhe magnetike me kombinim të notave pikante dhe drunore, ku kardamomi dhe neroli japin freski fillestare, ndërsa baza me lëkurë, patchouli dhe amber krijon një prezencë të thellë, elegante dhe shumë sensuale.",
+  img:"../img/parfumet/207.webp"
 },
 ];

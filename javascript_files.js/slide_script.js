@@ -10,7 +10,7 @@ const perfumes = [
     img:"../img/parfumet/top10-2.webp"
   },
   { 
-    id:"28", name:"Y EDP", brand:"Yves Saint Laurent", gender:"male",
+    id:"28", name:"Y EDP", brand:"YSL Yves Saint Laurent", gender:"male",
     variants:[ { ml:100, price:13500 } ],
     img:"../img/parfumet/top10-3.webp"
   },
