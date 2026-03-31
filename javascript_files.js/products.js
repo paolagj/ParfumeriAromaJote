@@ -964,4 +964,9 @@ const productsData = [
   desc: "Një aromë e butë dhe sensuale me musk, lule të bardha dhe nota të ngrohta, që krijon një efekt 'second skin' shumë tërheqës dhe elegant.",
   img:"../img/parfumet/201.webp"
 },
+{ id:"202", name:"Jawhara", brand:"Maissa", gender:"unisex",
+  variants:[ {ml:20, price:4000}, { ml:50, price:12000 }, { ml:100, price:19000 } ],
+  desc: "Një aromë orientale dhe misterioze me nota agrumesh, lule portokalli dhe patchouli, e mbështetur nga baza e ngrohtë me amber dhe vanilje për një prezencë sensuale dhe të paharrueshme.",
+  img:"../img/parfumet/202.webp"
+},
 ];
