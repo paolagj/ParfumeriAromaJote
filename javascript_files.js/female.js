@@ -1,7 +1,7 @@
-// --- DOM Elements ---
 const productsContainer = document.getElementById("productsContainer");
 const filterPanel = document.getElementById("filterPanel");
 const filterToggle = document.getElementById("filterToggle");
+const categoryFilter = document.getElementById("categoryFilter");
 const genderFilter = document.getElementById("genderFilter");
 const brandFilter = document.getElementById("brandFilter");
 const mlFilter = document.getElementById("mlFilter");
@@ -37,11 +37,19 @@ priceRange.value = priceRange.max;
 priceValue.innerText = `Max: ALL${priceRange.value}`;
 
 // --- Unique filter values ---
+const categories = [...new Set(
+  productsData.map(p => (p.category || "").toString().trim().toLowerCase())
+)];
 const genders = [...new Set(productsData.map(p => p.gender))];
 const brands = [...new Set(productsData.map(p => p.brand))];
 const mls = [20,30,50,60,75,90,100,125,150,200];
 
 // --- Render filter checkboxes ---
+categories.forEach(c => {
+  const el = document.createElement("label");
+  el.innerHTML = `<input type="checkbox" value="${c}">${c.charAt(0).toUpperCase() + c.slice(1)}`;
+  categoryFilter.appendChild(el);
+});
 genders.forEach(g => {
   const el = document.createElement("label");
   el.innerHTML = `<input type="checkbox" value="${g}">${g}`;
@@ -60,13 +68,14 @@ mls.forEach(m => {
 
 // --- Update filter button ---
 function updateFilterButtonState() {
+  const hasCategory = [...categoryFilter.querySelectorAll("input:checked")].length > 0;
   const hasGender = [...genderFilter.querySelectorAll("input:checked")].length > 0;
   const hasBrand = [...brandFilter.querySelectorAll("input:checked")].length > 0;
   const hasMl = [...mlFilter.querySelectorAll("input:checked")].length > 0;
   const priceChanged = priceRange.value < priceRange.max;
   const searchActive = searchInput.value.trim() !== "";
 
-  if (hasGender || hasBrand || hasMl || priceChanged || searchActive) {
+if (hasCategory || hasGender || hasBrand || hasMl ||  priceChanged || searchActive) {
     filterToggle.innerText = "Filter - Active";
     filterToggle.style.backgroundColor = "#5ba1ad";
     filterToggle.style.color = "#fff";
@@ -95,6 +104,7 @@ function loadFiltersFromStorage() {
 
   const hasActiveFilters = savedFilters &&
     (
+      savedFilters.categories?.length ||
       savedFilters.genders?.length ||
       savedFilters.brands?.length ||
       savedFilters.mls?.length ||
@@ -104,6 +114,7 @@ function loadFiltersFromStorage() {
 
   if (!hasActiveFilters && (searchQueryFromURL || brandFromURL)) {
     savedFilters = {
+      categories: [],
       genders: [],
       brands: brandFromURL ? [decodeURIComponent(brandFromURL)] : [],
       mls: [],
@@ -117,6 +128,7 @@ function loadFiltersFromStorage() {
 
   if (!savedFilters) {
     savedFilters = {
+      categories: [],
       genders: [],
       brands: [],
       mls: [],
@@ -126,6 +138,8 @@ function loadFiltersFromStorage() {
     };
   }
 
+
+[...categoryFilter.querySelectorAll("input")].forEach(i => i.checked = savedFilters.categories?.includes(i.value));
   [...genderFilter.querySelectorAll("input")].forEach(i => i.checked = savedFilters.genders.includes(i.value));
   [...brandFilter.querySelectorAll("input")].forEach(i => i.checked = savedFilters.brands.includes(i.value));
   [...mlFilter.querySelectorAll("input")].forEach(i => i.checked = savedFilters.mls.includes(parseInt(i.value)));
@@ -139,6 +153,7 @@ function loadFiltersFromStorage() {
 // --- Save filters to sessionStorage ---
 function saveFiltersToStorage(totalPages) {
   const filters = {
+    categories: [...categoryFilter.querySelectorAll("input:checked")].map(i => i.value),
     genders: [...genderFilter.querySelectorAll("input:checked")].map(i => i.value),
     brands: [...brandFilter.querySelectorAll("input:checked")].map(i => i.value),
     mls: [...mlFilter.querySelectorAll("input:checked")].map(i => parseInt(i.value)),
@@ -169,13 +184,16 @@ function getFilteredProducts() {
       );
     });
   }
-
+  const selectedCategories = [...categoryFilter.querySelectorAll("input:checked")].map(i => i.value.toLowerCase());
   const selectedGenders = [...genderFilter.querySelectorAll("input:checked")].map(i => i.value.toLowerCase());
   const selectedBrands = [...brandFilter.querySelectorAll("input:checked")].map(i => i.value.toLowerCase());
   const selectedMls = [...mlFilter.querySelectorAll("input:checked")].map(i => parseInt(i.value));
   const maxPrice = parseInt(priceRange.value);
 
   return filtered.filter(p => {
+  const productCategory = (p.category || "").toString().trim().toLowerCase();
+
+if (selectedCategories.length && !selectedCategories.includes(productCategory))return false;
     if(selectedGenders.length && !selectedGenders.includes(p.gender.toLowerCase())) return false;
     if(selectedBrands.length && !selectedBrands.includes(p.brand.toLowerCase())) return false;
 
@@ -280,7 +298,7 @@ pagination.addEventListener("click", (e) => {
   }
 });
 
-[genderFilter, brandFilter, mlFilter].forEach(f => f.addEventListener("change", () => {
+[categoryFilter, genderFilter, brandFilter, mlFilter].forEach(f => f.addEventListener("change", () => {
   currentPage = 1;
   renderFilteredProducts();
 }));
@@ -306,6 +324,7 @@ clearBtn.addEventListener("click", () => {
   renderFilteredProducts();
 });
 clearFiltersBtn.addEventListener("click", () => {
+  [...categoryFilter.querySelectorAll("input")].forEach(i => i.checked=false);
   [...genderFilter.querySelectorAll("input")].forEach(i => i.checked=false);
   [...brandFilter.querySelectorAll("input")].forEach(i => i.checked=false);
   [...mlFilter.querySelectorAll("input")].forEach(i => i.checked=false);
