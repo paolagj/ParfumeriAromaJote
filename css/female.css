@@ -114,6 +114,7 @@ main { display:flex; position: relative; }
 }
 
 /* Fjalet e filter-it ne bllok */
+#categoryFilter label,
 #genderFilter label,
 #brandFilter label,
 #mlFilter label {
