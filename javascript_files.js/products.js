@@ -33,7 +33,7 @@ const productsData = [
   desc:"Aromë sensuale dhe e pasur me jasmin të thellë, të kombinuar me nota të ëmbla dhe druri të ngrohtë, për një ndjesi elegante dhe magnetike që zbulon butësinë dhe forcën në të njëjtën kohë.", img:"../img/parfumet/25.webp"
 },
 { id:"26",category:"Parfume", name:"Versace Eros Eau De Toilete", brand:"Versace", gender:"male", 
-  variants:[ { ml: 50, price: 13000 }, { ml:100, price:17000 }],
+  variants:[ { ml: 50, price: 7900 }, { ml:100, price:10700 }, { ml:200, price:14200 }],
   desc:"Aromë e freskët dhe e ndritshme me prekje aromatike dhe të ngrohta. Ideale për përdorim të përditshëm.",
   img:"../img/parfumet/26.webp"
 },
@@ -81,7 +81,7 @@ const productsData = [
   img:"../img/parfumet/109.webp"
 },
 { id:"110",category:"Parfume", name:"Dior Sauvage Elixir", brand:"Dior", gender:"male",
-  variants:[ { ml:60, price:17000 } ],
+  variants:[ { ml:100, price:24000 },{ ml:150, price:31000 } ],
   desc:"Një aromë intense, e fuqishme dhe magnetizuese, me nota pikante dhe druri të thellë.",
   img:"../img/parfumet/110.webp"
 },
@@ -154,7 +154,7 @@ const productsData = [
   img:"../img/parfumet/6.webp"
 },
 { id:"9", category:"Parfume", name:"Stronger with You", brand:"Emporio Armani", gender:"male",
-  variants:[ { ml:50, price:9500 },{ ml:100, price:12500 } ],
+  variants:[ { ml:50, price:9500 },{ ml:100, price:12000 } ],
   desc:"Një aromë moderne dhe e ngrohtë, perfekte për elegancë dhe stil të përditshëm.",
   img:"../img/parfumet/9.webp"
 },
@@ -224,7 +224,7 @@ const productsData = [
   img:"../img/parfumet/19.webp"
 },
 { id:"20", category:"Parfume", name:"Versace Eros Eau de Parfum", brand:"Versace", gender:"male", 
-  variants:[ { ml: 75, price: 10000 },{ ml:125, price:13000 } ],
+  variants:[ { ml: 50, price: 8700 },{ ml:100, price:11800 } ],
   desc:"Aromë intensive dhe energjike me karakter mashkullor. Jep ndjesi force, pasioni dhe vetëbesimi.",
   img:"../img/parfumet/top10-9.webp"
 },
@@ -971,12 +971,12 @@ const productsData = [
   img:"../img/parfumet/202.webp"
 },
 { id:"203", category:"Parfume", name:"Set The One", brand:"Dolce & Gabbana", gender:"female",
-  variants:[ {ml:75, price:14000}],
+  variants:[ {ml:75, price:13000}],
   desc: "Një set luksoz dhe elegant që përfshin parfum 75 ml, mini parfum 10 ml dhe body lotion 50 ml, i ndërtuar rreth aromës ikonike Dolce & Gabbana The One. Me nota të ngrohta të mandarinës, trëndafilit dhe vaniljes, krijon një kombinim perfekt mes elegancës dhe sensualitetit, duke dhënë një prezencë të butë, femërore dhe shumë tërheqëse me qëndrueshmëri të lartë.",
   img:"../img/parfumet/203.webp"
 },
 { id:"204",category:"Parfume", name:"Set King", brand:"Dolce & Gabbana", gender:"male",
-  variants:[ {ml:100, price:14000}],
+  variants:[ {ml:100, price:13000}],
   desc: "Një set modern dhe karizmatik që përfshin parfum 100 ml, deodorant stick dhe shampo 50 ml, i ndërtuar rreth aromës energjike Dolce & Gabbana K. Me nota të freskëta agrumesh, livando dhe bazë druri me patchouli e vetiver, krijon një kombinim perfekt mes freskisë dhe maskulinitetit, duke dhënë një prezencë të fortë, elegante dhe shumë tërheqëse për çdo moment të ditës.",
   img:"../img/parfumet/204.webp"
 },
@@ -1010,5 +1010,23 @@ const productsData = [
   desc: "Gucci Guilty Pour Femme është një parfum elegant dhe sensual me karakter floral-amber. Hapet me nota të freskëta agrumesh dhe piper rozë, kalon në një zemër delikate me lule si lilac dhe jasmin, dhe mbyllet me një bazë të ngrohtë amber, patchouli dhe musk që lë një aromë shumë joshëse dhe femërore.",
   img:"../img/parfumet/209.webp"
 },
-
+{ id:"210", category:"Parfume", name:"Stronger with You Parfum", brand:"Emporio Armani", gender:"male",
+  variants:[  { ml:100, price:14500 }],
+  desc:"Një aromë magnetike dhe e ngrohtë që kombinon vaniljen, amberin dhe nota pikante për një prezencë mashkullore, sensuale dhe të paharrueshme. Perfekti për mbrëmje dhe për të lënë gjurmë kudo që shkon.", img:"../img/parfumet/210.webp"
+},
+{ id:"211", category:"Parfume", name:"Libre Intense", brand:"YSL Yves Saint Laurent", gender:"female",
+  variants:[  { ml:90, price:17500 } ],
+  desc:"Një aromë luksoze dhe e thellë që bashkon lavandën, lulen e portokallit dhe vaniljen e ngrohtë për një efekt sensual, elegant dhe shumë tërheqës. Perfekti për femra të sigurta që duan të lënë një prezencë të fortë dhe të paharrueshme.",
+  img:"../img/parfumet/211.webp"
+},
+{ id:"212", category:"Parfume", name:"Libre Le Parfum", brand:"YSL Yves Saint Laurent", gender:"female",
+  variants:[  { ml:90, price:20000 } ],
+  desc:"Një aromë ultra elegante dhe intensive që kombinon lavandën ikonike me shafranin dhe vaniljen e ngrohtë, duke krijuar një ndjesi luksi, sensualiteti dhe dominimi. Perfekte për mbrëmje dhe për një prezencë të fortë që nuk kalon pa u vënë re.",
+  img:"../img/parfumet/212.webp"
+},
+{ id:"213",category:"Parfume", name:"Versace Eros Parfum", brand:"Versace", gender:"male", 
+  variants:[ { ml:100, price:14200 }],
+  desc:"Një aromë e fuqishme dhe joshëse që kombinon freskinë e mentës me ëmbëlsinë e vaniljes dhe thellësinë e drurit, duke krijuar një prezencë mashkullore, sensuale dhe dominante. Perfekti për të tërhequr vëmendje dhe për të lënë gjurmë.",
+  img:"../img/parfumet/213.webp"
+},
 ];
